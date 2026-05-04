@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+          background: linear-gradient(180deg, #F3F4FE 0%, #ffffff 100%);
+        }
+       .dot-pattern {
+          background-image: radial-gradient(circle, #d1d5f3 1px, transparent 1px);
+          background-size: 28px 28px;
+        }
+       .icon-circle {
+           width: 70px;
+           height: 70px;
+           border-radius: 50%;
+           background: linear-gradient(135deg, #4A6CF7 0%, #6a8cff 100%);
+           display: flex; align-items: center; justify-content: center;
+           margin-bottom: 1rem;
+        }
+       .tab-active {
+           border-bottom: 2px solid #4A6CF7;
+           color: #4A6CF7;
+        }
+       .pricing-highlight {
+           background: linear-gradient(135deg, #4A6CF7, #6a8cff);
+           color: white;
+        }
+       .collab-bg {
+           background: linear-gradient(135deg, #090E34 0%, #1a2460 100%);
+        }
+    </style>
     <title>GoStartup</title>
 </head>
 <body>
-    <nav class="flex items-center justify-around p-4 max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="flex items-center justify-around px-6 py-4 flex">
         <div class="nav-logo">
             <img src="./10001.svg" alt="logo">
         </div>
@@ -22,63 +50,57 @@
             <button>Sign Up</button>
         </div>
     </nav>
-    <section class="hero-section hero-bg dot-pattern pt-40 pb-24 overflow-hidden max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+    <section class="hero-section hero-bg pt-40 pb-24 overflow-hidden mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         <div class="hero-content flex-1 text-center lg:text-left">
-            <span class="inline-block text-xs font-semibold tracking-widest text-primary uppercase bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-6">Tailwind Template for Startups</span>
+            <span class="inline-block font-semibold text-xs uppercase bg-blue-50 border border-blue-300 rounded-full px-4 py-2 mb-6">Tailwind Template for Startups</span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-6">Digital Solutions for<br>Your <span class="text-primary relative">Business</span></h1>
-            <p class="text-base text-gray-500 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website.
+            <p class="text-base text-gray-500 leading-relaxed mx-auto lg:mx-0 mb-8">Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website.
             Comes with refreshing design and everything you need to kickstart your next web project.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button class="px-8 py-3.5 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-600 transition-all">Get Started</button>
-                <button class="px-8 py-3.5 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-600 transition-all">How it Work</button>
+                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">Get Started</button>
+                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">How it Work</button>
             </div>
         </div>
 
-        <div class="hero-image flex-1 relative flex justify-center items-end gap-4 mt-12 lg:mt-0">
-            <img src="" alt="An entrepreneur working on a laptop" class="w-48 sm:w-56 rounded-2xl shadow-2xl mb-10 object-cover">
-            <img src="" alt="A person in an office setting" class="w-48 sm:w-56 rounded-2xl shadow-2xl mb-10 object-cover">
+        <div class="hero-image flex-1 relative flex justify-center items-end gap-2 mt-12 lg:mt-0 w-80">
+            <img src="./10003.jpg" alt="An entrepreneur working on a laptop" class="w-70 h-90 sm:w-56 rounded-2xl shadow-xl mb-10 object-cover">
+            <img src="./10002.jpg" alt="A person in an office setting" class="w-80 h-30 sm:w-70 rounded-2xl shadow-xl mb-10 object-cover">
         </div>
     </section>
 
-    <section class="features-section py-24 bg-white max-w-7xl mx-auto px-6">
+    <section class="features-section py-24 bg-white mx-auto px-6">
         <div class="title text-center mb-14">
-            <span class="inline-block text-xs font-semibold tracking-widest text-primary uppercase bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-4">Our Unique & Awesome Core Features</span>
-            <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <span class="inline-block font-semibold text-xs uppercase bg-blue-50 border border-blue-300 rounded-full px-4 py-2 mb-6">Our Unique & Awesome Core Features</span>
+            <p class="text-gray-500 mx-auto text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
         <div class="circular-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon" class="icon-circle mx-auto">
+            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon">
+            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon">
+            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon">
+            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon">
+            <div class= "p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="group p-8 rounded-2xl border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center">
-                <img src="" alt="A circular card with an icon">
+            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
@@ -86,23 +108,23 @@
         </div>
     </section>
 
-    <section class="company-section py-24 bg-gray-50 max-w-7xl mx-auto px-6">
+    <section class="company-section py-24 bg-gray-50 mx-auto px-6">
         <div class="title text-center mb-8">
-            <span class="inline-block text-xs font-semibold tracking-widest text-primary uppercase bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-4">Know Details About Our Company</span>
-            <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <span class="inline-block text-xs font-semibold uppercase bg-blue-50 border border-blue-300 rounded-full px-4 py-2 mb-4">Know Details About Our Company</span>
+            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
-        <div class="title-links flex justify-center gap-8 mb-12 border-b border-gray-200 pb-0"">
+        <div class="title-links flex justify-center gap-8 mb-12 border-b border-gray-200">
             <a href="#" class="pb-3 text-sm font-semibold tab-active">About Us</a>
-            <a href="#" class="pb-3 text-sm font-medium text-gray-500 hover:text-primary transition-colors border-b-2 border-transparent">Our Mission</a>
-            <a href="#" class="pb-3 text-sm font-medium text-gray-500 hover:text-primary transition-colors border-b-2 border-transparent">Our Vision</a>
+            <a href="#" class="pb-3 text-sm font-medium text-gray-500 border-b-2 border-transparent">Our Mission</a>
+            <a href="#" class="pb-3 text-sm font-medium text-gray-500 border-b-2 border-transparent">Our Vision</a>
         </div>
-        <div class="title-content flex flex-col lg:flex-row items-center gap-12">
+        <div class="title-content flex flex-col lg:flex-row items-center">
             <div class="title-content-image relative flex-1 flex justify-center">
-                <img src="" alt="An image of a person working on a laptop" class="w-72 rounded-2xl shadow-2xl object-cover">
+                <img src="./10020.jpg" alt="An image of a person working on a laptop" class="rounded-2xl shadow-2xl object-cover">
             </div>
             <div class="title-content-text flex-1">
-                <span class="block text-2xl font-bold text-dark mb-4 leading-snug">We are Creative Digital Agency Based in USA</span>
+                <span class="block text-2xl font-bold mb-4">We are Creative Digital Agency Based in USA</span>
                 <p class="text-sm text-gray-500 leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. 
                 In ac lectus vel orci accumsan ultricies at in libero accumsan. Phasellus ex massa, facilisis ac vestibulum eget, 
                 ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor. Phasellus ex massa, facilisis ac vestibulum eget, 
@@ -111,26 +133,26 @@
         </div>
     </section>
 
-    <section class="team-section py-24 bg-white max-w-7xl mx-auto px-6">
+    <section class="team-section py-24 bg-white mx-auto px-6">
         <div class="title text-center mb-14">
-            <span class="inline-block text-xs font-semibold tracking-widest text-primary uppercase bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-4">Meet With Our Creative Dedicated Team</span>
-            <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <span class="inline-block text-xs font-semibold uppercase bg-blue-50 border border-blue-300 rounded-full px-4 py-2 mb-4">Meet With Our Creative Dedicated Team</span>
+            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
-        <div class="team-cards grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div class="cards-team group text-center overflow-hidden rounded-2xl mb-5 shadow-md">
-                <img src="" alt="A team member's profile picture" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-                <h3 class="text-lg font-bold text-dark">Olivia Andrium</h3>
+        <div class="team-cards grid grid-cols-1 lg:grid-cols-3 gap-2">
+            <div class="cards-team text-center mb-5 w-80 mx-auto">
+                <img src="./10005.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
+                <h3 class="text-lg font-bold my-4">Olivia Andrium</h3>
                 <p class="text-sm text-gray-400 mt-1">Project Manager</p>
             </div>
-            <div class="cards-team group text-center overflow-hidden rounded-2xl mb-5 shadow-md">
-                <img src="" alt="A team member's profile picture" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-                <h3 class="text-lg font-bold text-dark">Jemse Kemorun</h3>
+            <div class="cards-team text-center mb-5 w-80 mx-auto">
+                <img src="./10006.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
+                <h3 class="text-lg font-bold my-4">Jemse Kemorun</h3>
                 <p class="text-sm text-gray-400 mt-1">Project Designer</p>
             </div>
-            <div class="cards-team group text-center overflow-hidden rounded-2xl mb-5 shadow-md">
-                <img src="" alt="A team member's profile picture" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
-                <h3 class="text-lg font-bold text-dark">Avi Pestarica</h3>
+            <div class="cards-team text-center mb-5 w-80 mx-auto">
+                <img src="./10021.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
+                <h3 class="text-lg font-bold my-4">Avi Pestarica</h3>
                 <p class="text-sm text-gray-400 mt-1">Web Designer</p>
             </div>
         </div>
@@ -151,16 +173,16 @@
         </div>
 
         <div class="case-studies-images grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <img src="" alt="Portfolio 1" class="rounded-2xl object-cover w-full h-64 hover:scale-105 transition-transform duration-300 shadow">
+            <img src="./10007.jpg" alt="Portfolio 1" class="rounded-2xl object-cover w-full h-64 hover:scale-105 transition-transform duration-300 shadow">
             <div>
-                <img src="" alt="Portfolio 2" class="rounded-2xl object-cover w-full h-28 shadow hover:scale-105 transition-transform duration-300">
-                <img src="" alt="Portfolio 3" class="rounded-2xl object-cover w-full h-28 shadow hover:scale-105 transition-transform duration-300">
+                <img src="./10008.jpg" alt="Portfolio 2" class="rounded-2xl object-cover w-full h-28 shadow hover:scale-105 transition-transform duration-300">
+                <img src="./10009.jpg" alt="Portfolio 3" class="rounded-2xl object-cover w-full h-28 shadow hover:scale-105 transition-transform duration-300">
             </div>
-            <img src="" alt="Portfolio 4" class="rounded-2xl object-cover w-full h-64 hover:scale-105 transition-transform duration-300 shadow">
-            <div class="flex items-center justify-center">
-                <button class="px-8 py-3.5 bg-primary text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-200 hover:bg-blue-600 transition-all">See More Products</button>
-            </div>
+            <img src="./10010.jpg" alt="Portfolio 4" class="rounded-2xl object-cover w-full h-64 hover:scale-105 transition-transform duration-300 shadow">
         </div>    
+        <div class="flex items-center justify-center mt-8">
+            <button class="px-8 py-3.5 bg-primary text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">See More Products</button>
+        </div>
     </section>
 
     <section class="testimonials-section py-24 bg-white max-w-7xl mx-auto px-6">
@@ -178,8 +200,8 @@
                 <h3 class="text-base font-bold text-dark">Olivia Andrium</h3>
                 <p class="text-sm text-gray-400">Project Manager</p>
             </div>
-            <div class="testimonial-card w-48 h-48 rounded-full overflow-hidden shadow-2xl flex-shrink-0">
-                <img src="" alt="A client's profile picture" class="w-full h-full object-cover">
+            <div class="testimonial-card w-48 h-48  shadow-2xl">
+                <img src="./10011.jpg" alt="A client's profile picture" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
@@ -286,17 +308,17 @@
 
         <div class="blog-cards grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
-                <img src="" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="./10016.jpg" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 <p><span class="font-medium text-primary">Musharof Chy</span><span>25 Dec, 2025</span></p>
                 <p class="text-base font-bold text-dark hover:text-primary transition-colors cursor-pointer">Free advertising for your online business</p>
             </div>
             <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
-                <img src="" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="./10017.jpg" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 <p><span class="font-medium text-primary">Musharof Chy</span><span>25 Dec, 2025</span></p>
                 <p class="text-base font-bold text-dark hover:text-primary transition-colors cursor-pointer">9 simple ways to improve your design skills</p>
             </div>
             <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
-                <img src="" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="./10018.jpg" alt="" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 <p><span class="font-medium text-primary">Musharof Chy</span><span>25 Dec, 2025</span></p>
                 <p class="text-base font-bold text-dark hover:text-primary transition-colors cursor-pointer">Tips to quickly improve your coding speed.</p>
             </div>
