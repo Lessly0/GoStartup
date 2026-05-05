@@ -5,60 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-bg {
-          background: linear-gradient(180deg, #F3F4FE 0%, #ffffff 100%);
-        }
-       .dot-pattern {
-          background-image: radial-gradient(circle, #d1d5f3 1px, transparent 1px);
-          background-size: 28px 28px;
-        }
-       .icon-circle {
-           width: 70px;
-           height: 70px;
-           border-radius: 50%;
-           background: linear-gradient(135deg, #4A6CF7 0%, #6a8cff 100%);
-           display: flex; align-items: center; justify-content: center;
-           margin-bottom: 1rem;
-        }
        .tab-active {
            border-bottom: 2px solid #4A6CF7;
            color: #4A6CF7;
         }
-       .pricing-highlight {
-           background: linear-gradient(135deg, #4A6CF7, #6a8cff);
-           color: white;
-        }
-       .collab-bg {
-           background: linear-gradient(135deg, #090E34 0%, #1a2460 100%);
+        .section-bg{
+            background: linear-gradient(180deg, #090E34 0%, #1A0E34 60%, #090E34 100%);
         }
     </style>
     <title>GoStartup</title>
 </head>
-<body>
-    <nav class="flex items-center justify-around px-6 py-4 flex">
-        <div class="nav-logo">
+<body class="text-white">
+    <nav class="flex items-center justify-around px-2 py-4 flex gap-8 lg:px-6 section-bg">
+        <div class="nav-logo w-1/3 lg:w-full">
             <img src="./10001.svg" alt="logo">
         </div>
-        <div class="nav-links flex gap-4">  
+        <div class="nav-links w-2/3 lg:w-full flex gap-6">  
             <a href="#">Home</a>
             <a href="#">Features</a>
             <a href="#">Pages</a>
             <a href="#">Support</a>
         </div>
-        <div class="nav-but flex gap-4 justify-end">
-            <button>Sign In</button>
-            <button>Sign Up</button>
+        <div class="nav-but hidden lg:flex gap-4 justify-end">
+            <button class="border-2 border-gray-200 px-4 rounded-full">Sign In</button>
+            <button class="border-2 border-gray-200 px-4 rounded-full">Sign Up</button>
         </div>
     </nav>
-    <section class="hero-section hero-bg pt-40 pb-24 mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+    <section class="hero-section collab-bg pt-40 pb-24 mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 section-bg">
         <div class="hero-content flex-1 text-center lg:text-left">
-            <span class="inline-block font-semibold text-xs uppercase bg-blue-50 border border-blue-300 rounded-full px-4 py-2 mb-6">Tailwind Template for Startups</span>
+            <span class="inline-block font-semibold text-xs uppercase border border-blue-300 rounded-full px-4 py-2 mb-6">Tailwind Template for Startups</span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-6">Digital Solutions for<br>Your <span class="text-primary relative">Business</span></h1>
-            <p class="text-base text-gray-500 leading-relaxed mx-auto lg:mx-0 mb-8">Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website.
+            <p class="text-base text-gray-300 leading-relaxed mx-auto lg:mx-0 mb-8">Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website.
             Comes with refreshing design and everything you need to kickstart your next web project.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">Get Started</button>
-                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">How it Work</button>
+                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-md shadow-blue-200 bg-blue-600">Get Started</button>
+                <button class="px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-md shadow-blue-200 bg-blue-600">How it Work</button>
             </div>
         </div>
 
@@ -68,64 +49,64 @@
         </div>
     </section>
 
-    <section class="features-section py-24 bg-white mx-auto px-6">
+    <section class="features-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-14">
             <span class="block text-5xl font-bold py-2 mb-4">Our Unique & Awesome Core Features</span>
-            <p class="text-gray-500 mx-auto text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
-        <div class="circular-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+        <div class="circular-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[85%] mx-auto">
+            <div class="p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+            <div class="p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+            <div class="p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+            <div class="p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class= "p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+            <div class= "p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
-            <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 hover:shadow-xl text-center">
+            <div class="p-8 rounded-2xl text-center">
                 <h3 class="text-lg font-bold text-dark mb-2">Crafted for Startups</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-sm text-gray-300 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus.</p>
             </div>
         </div>
     </section>
 
-    <section class="company-section py-24 bg-gray-50 mx-auto px-6">
+    <section class="company-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-8">
             <span class="block text-5xl font-bold py-2 mb-4">Know Details About Our Company</span>
-            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
         <div class="title-links flex justify-center gap-8 mb-12 border-b border-gray-200">
             <a href="#" class="pb-3 text-sm font-semibold tab-active">About Us</a>
-            <a href="#" class="pb-3 text-sm font-medium text-gray-500 border-b-2 border-transparent">Our Mission</a>
-            <a href="#" class="pb-3 text-sm font-medium text-gray-500 border-b-2 border-transparent">Our Vision</a>
+            <a href="#" class="pb-3 text-sm font-medium text-gray-300 border-b-2 border-transparent">Our Mission</a>
+            <a href="#" class="pb-3 text-sm font-medium text-gray-300 border-b-2 border-transparent">Our Vision</a>
         </div>
-        <div class="title-content flex flex-col lg:flex-row items-center">
+        <div class="title-content flex flex-col lg:flex-row items-center w-[85%] mx-auto">
             <div class="title-content-image relative flex-1 flex justify-center">
                 <img src="./10020.jpg" alt="An image of a person working on a laptop" class="rounded-2xl shadow-2xl object-cover">
             </div>
             <div class="title-content-text flex-1">
                 <span class="block text-2xl font-bold mb-4">We are Creative Digital Agency Based in USA</span>
-                <p class="text-sm text-gray-500 leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. 
+                <p class="text-sm text-gray-300 leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. 
                 In ac lectus vel orci accumsan ultricies at in libero accumsan. Phasellus ex massa, facilisis ac vestibulum eget, 
                 ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor. Phasellus ex massa, facilisis ac vestibulum eget, 
                 ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.</p>
@@ -133,35 +114,35 @@
         </div>
     </section>
 
-    <section class="team-section py-24 bg-white mx-auto px-6">
+    <section class="team-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-14">
             <span class="block text-5xl font-bold py-2 mb-4">Meet With Our Creative Dedicated Team</span>
-            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
-        <div class="team-cards grid grid-cols-1 lg:grid-cols-3 gap-2">
+        <div class="team-cards grid grid-cols-1 lg:grid-cols-3 gap-2 w-[85%] mx-auto">
             <div class="cards-team text-center mb-5 w-80 mx-auto">
                 <img src="./10005.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
                 <h3 class="text-lg font-bold my-4">Olivia Andrium</h3>
-                <p class="text-sm text-gray-400 mt-1">Project Manager</p>
+                <p class="text-sm text-gray-300 mt-1">Project Manager</p>
             </div>
             <div class="cards-team text-center mb-5 w-80 mx-auto">
                 <img src="./10006.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
                 <h3 class="text-lg font-bold my-4">Jemse Kemorun</h3>
-                <p class="text-sm text-gray-400 mt-1">Project Designer</p>
+                <p class="text-sm text-gray-300 mt-1">Project Designer</p>
             </div>
             <div class="cards-team text-center mb-5 w-80 mx-auto">
                 <img src="./10021.jpg" alt="A team member's profile picture" class="h-64 mx-auto object-cover">
                 <h3 class="text-lg font-bold my-4">Avi Pestarica</h3>
-                <p class="text-sm text-gray-400 mt-1">Web Designer</p>
+                <p class="text-sm text-gray-300 mt-1">Web Designer</p>
             </div>
         </div>
     </section>
 
-    <section class="case-studies-section py-24 bg-gray-50 mx-auto px-6">
+    <section class="case-studies-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-8">
             <span class="block text-5xl font-bold py-2 mb-4">Explore Our Latest Case Studies</span>
-            <p class="text-gray-500 mx-auto text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
 
@@ -172,7 +153,7 @@
             <a href="#" class="px-5 py-2 text-sm font-medium text-gray-600 bg-white rounded-full border border-gray-200">eCommerce</a>
         </div>
 
-        <div class="case-studies-images grid grid-cols-3 gap-4 mx-auto">
+        <div class="case-studies-images grid grid-cols-3 gap-4 mx-auto w-[85%] mx-auto">
             <div>
                 <img src="./10007.jpg" alt="Portfolio 1" class="rounded-2xl object-cover w-full h-full">
             </div>
@@ -185,24 +166,24 @@
             </div>
         </div>    
         <div class="flex items-center justify-center mt-10">
-            <button class="px-8 py-3.5 text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-200 bg-blue-600">See More Products</button>
+            <button class="px-8 py-3.5 text-white text-sm font-semibold rounded-full shadow-md shadow-blue-200 bg-blue-600">See More Products</button>
         </div>
     </section>
 
-    <section class="testimonials-section py-24 bg-white mx-auto px-6">
+    <section class="testimonials-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-14">
             <span class="block text-5xl font-bold py-2 mb-4">What Our Clients Say About Us</span>
-            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
 
-        <div class="testimonials flex flex-col md:flex-row items-center gap-12 bg-gray-50 rounded-3xl p-10 shadow-sm">
+        <div class="testimonials flex flex-col md:flex-row items-center gap-12 bg-gray-800 rounded-3xl px-4 py-6 shadow-sm w-[85%] mx-auto">
             <div class="testimonial-text flex-1">
-                <p class="text-gray-600 text-base italic leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. 
+                <p class="text-gray-300 text-base italic leading-relaxed mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. 
                 In ac lectus vel orci accumsan ultricies at in libero accumsan. Phasellus ex massa, facilisis ac vestibulum eget, 
                 ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.</p>
-                <h3 class="text-base font-bold text-dark">Olivia Andrium</h3>
-                <p class="text-sm text-gray-400">Project Manager</p>
+                <h3 class="text-base font-bold">Olivia Andrium</h3>
+                <p class="text-sm text-gray-300">Project Manager</p>
             </div>
             <div class="testimonial-card w-48 h-48  shadow-2xl">
                 <img src="./10011.jpg" alt="A client's profile picture" class="w-full h-full object-cover">
@@ -210,14 +191,14 @@
         </div>
     </section>
 
-    <section class="brands-section py-16 bg-gray-50 border-y border-gray-100 mx-auto px-6">
+    <section class="brands-section py-16 border-y border-gray-100 mx-auto px-6 section-bg">
         <div class="title text-center mb-10">
             <span class="block text-5xl font-bold py-2 mb-4">Trusted by Global Brands</span>
-            <p class="text-gray-500 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
 
-        <div class="brands-logos flex flex-wrap justify-center items-center gap-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+        <div class="brands-logos flex flex-wrap justify-center items-center gap-8">
             <img src="./logo1.svg" alt="Uldeck logo" class="h-8">
             <img src="./logo2.svg" alt="TailAdmin logo" class="h-8">
             <img src="./logo3.svg" alt="graygrid logo" class="h-8">
@@ -226,46 +207,46 @@
         </div>
     </section>
 
-    <section class="pricing-section py-24 bg-white mx-auto px-6">
+    <section class="pricing-section py-24 bg-white mx-auto px-6 section-bg">
         <div class="title text-center mb-14">
             <span class="block text-5xl font-bold py-2 mb-4">Affordable Pricing With Simple Plans</span>
-            <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
 
-        <div class="">
-            <div class="plan-names grid grid-cols-1 md:grid-cols-3 rounded-2xl border border-gray-100 p-8">
+        <div class="pricing-content w-[85%] mx-auto">
+            <div class="plan-names grid grid-cols-1 lg:grid-cols-3 border-b border-gray-100 p-8">
                 <div class="name-text mb-4">
                     <span class="block text-xl font-bold">Free</span>
-                    <span class="text-sm text-gray-400">The most basic plan</span>
+                    <span class="text-base text-gray-300">The most basic plan</span>
                 </div>
                 <div class="name-text mb-4">
                     <span class="block text-xl font-bold">Basic</span>
-                    <span class="text-sm text-gray-400">The most popular plan</span>
+                    <span class="text-base text-gray-300">The most popular plan</span>
                 </div>
                 <div class="name-text mb-4">
                     <span class="block text-xl font-bold">Premium</span>
-                    <span class="text-sm text-gray-400">The most premium plan</span>
+                    <span class="text-base text-gray-300">The most premium plan</span>
                 </div>   
             </div>
-            <div class="plan-price grid grid-cols-1 md:grid-cols-3 mb-6 border-b border-gray-100 p-8">
-                <div class="price-text mb-4">
-                    <span class="block text-4xl font-extrabold">$0/<span class="text-lg font-medium text-gray-400">month</span></span>
-                    <p class="my-4">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
+            <div class="plan-price grid grid-cols-1 lg:grid-cols-3 border-b border-gray-100 p-8">
+                <div class="price-text">
+                    <span class="block text-4xl font-extrabold">$0/<span class="text-lg font-bold text-gray-300">month</span></span>
+                    <p class="my-4 text-base text-gray-300">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
                 </div>
-                <div class="price-text mb-4">
-                    <span class="block text-4xl font-extrabold">$29/<span class="text-lg font-medium text-gray-400">month</span></span>
-                    <p class="my-4">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
+                <div class="price-text">
+                    <span class="block text-4xl font-extrabold">$29/<span class="text-lg font-bold text-gray-300">month</span></span>
+                    <p class="my-4 text-base text-gray-300">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
                 </div>
-                <div class="price-text mb-4">
-                    <span class="block text-4xl font-extrabold">$99/<span class="text-lg font-medium text-gray-400">month</span></span>
-                    <p class="my-4">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
+                <div class="price-text">
+                    <span class="block text-4xl font-extrabold">$99/<span class="text-lg font-bold text-gray-300">month</span></span>
+                    <p class="my-4 text-base text-gray-300">Lorem ipsum dolor sit ametion consectetur adipisc elit.</p>
                 </div>
             </div>
 
-            <div class="plan-features grid grid-cols-1 md:grid-cols-3 mb-6 border-b border-gray-100 p-8">
+            <div class="plan-features grid grid-cols-1 lg:grid-cols-3 border-b border-gray-100 p-8">
                 <div class="features-text mb-4">
-                    <ul class="space-y-3 mb-8 items-center gap-2 text-sm text-gray-600">
+                    <ul class="space-y-3 mb-8 items-center gap-2 text-base text-gray-300">
                         <li>300 GB Storage</li>
                         <li>Unlimited Photos and Videos</li>
                         <li>Exclusive Support</li>
@@ -275,7 +256,7 @@
                     <button class="py-2 px-4 border-2 font-semibold rounded-full">Join This Plan</button>
                 </div>
                 <div class="features-text mb-4">
-                    <ul class="space-y-3 mb-8 items-center gap-2 text-sm text-gray-600">
+                    <ul class="space-y-3 mb-8 items-center gap-2 text-base text-gray-300">
                         <li>300 GB Storage</li>
                         <li>Unlimited Photos and Videos</li>
                         <li>Exclusive Support</li>
@@ -285,7 +266,7 @@
                     <button class="py-2 px-4 border-2 font-semibold rounded-full">Join This Plan</button>
                 </div>
                 <div class="features-text mb-4">
-                    <ul class="space-y-3 mb-8 items-center gap-2 text-sm text-gray-600">
+                    <ul class="space-y-3 mb-8 items-center gap-2 text-base text-gray-300">
                         <li>300 GB Storage</li>
                         <li>Unlimited Photos and Videos</li>
                         <li>Exclusive Support</li>
@@ -295,171 +276,171 @@
                     <button class="py-2 px-4 border-2 font-semibold rounded-full">Join This Plan</button>
             </div>
         </div>
-        <div class="text-center mt-10 mx-auto max-w-md">
-            <span class="block text-gray-600 font-medium">Looking for a company solution.</span>
+        <div class="text-center mt-10 mx-auto">
+            <span class="block text-gray-300 font-medium py-4">Looking for a company solution.</span>
             <span class="font-semibold hover:underline">Contact our team to get a quote</span>
         </div>
             
     </section>
 
-    <section class="blog-section py-24 bg-gray-50 mx-auto px-6">
+    <section class="blog-section py-24 mx-auto px-6 section-bg">
         <div class="title text-center mb-14">
             <span class="block text-5xl font-bold py-2 mb-4">Latest News & Articles From Our Blog</span>
-            <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <p class="text-gray-300 mx-auto text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
         </div>
 
-        <div class="blog-cards grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl">
+        <div class="blog-cards grid grid-cols-1 sm:grid-cols-3 gap-8 w-[85%] mx-auto">
+            <div class="card bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-4xl">
                 <img src="./10016.jpg" alt="A person reading a book" class="w-full h-48 object-cover">
-                <p class="my-4"><span class="font-medium">Musharof Chy</span><span>25 Dec, 2025</span></p>
-                <p class="text-base mb-4 font-bold text-dark cursor-pointer">Free advertising for your online business</p>
+                <p class="m-4"><span class="text-base">Musharof Chy</span><span>25 Dec, 2025</span></p>
+                <p class="text-base m-4 font-bold cursor-pointer">Free advertising for your online business</p>
             </div>
-            <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl">
+            <div class="card bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-4xl">
                 <img src="./10017.jpg" alt="Statistics of information" class="w-full h-48 object-cover">
-                <p class="my-4"><span class="font-medium">Musharof Chy</span><span>25 Dec, 2025</span></p>
-                <p class="text-base mb-4 font-bold text-dark cursor-pointer">9 simple ways to improve your design skills</p>
+                <p class="m-4"><span class="text-base">Musharof Chy</span><span>25 Dec, 2025</span></p>
+                <p class="text-base m-4 font-bold cursor-pointer">9 simple ways to improve your design skills</p>
             </div>
-            <div class="card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xlp">
+            <div class="card bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-4xl">
                 <img src="./10018.jpg" alt="A computer on a desk" class="w-full h-48 object-cover">
-                <p class="my-4"><span class="font-medium">Musharof Chy</span><span>25 Dec, 2025</span></p>
-                <p class="text-base mb-4 font-bold text-dark cursor-pointer">Tips to quickly improve your coding speed.</p>
+                <p class="m-4"><span class="text-base">Musharof Chy</span><span>25 Dec, 2025</span></p>
+                <p class="text-base m-4 font-bold cursor-pointer">Tips to quickly improve your coding speed.</p>
             </div>
         </div>
     </section>
 
-    <section class="contact-section py-24 bg-white mx-auto px-6 flex flex-col gap-16">
+    <section class="contact-section py-24 mx-auto px-6 flex flex-col section-bg">
         <div class="contact flex justify-around">
             <div class="title mb-6">
                 <span class="block text-5xl font-bold py-2 mb-4">Need Any Help? Say hello</span>
-                <p class="text-gray-500 text-sm leading-relaxed max-w-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <p class="text-gray-300 text-sm leading-relaxed max-w-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
             </div>
             <div class="contact-info">
-                <span class="text-primary font-semibold text-sm hover:underline">info@gostartup.com</span>   
+                <span class="font-semibold text-base lg:text-2xl">info@gostartup.com</span>   
             </div>
         </div>
 
-        <div class="contact-info mt-10 flex justify-around mx-14">
+        <div class="contact-info mt-10 justify-around w-[82%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div class="contact-info-item">
-                <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Email Address</span>
-                <span class="text-sm font-medium text-dark">support@startup.com</span>
+                <span class="block text-base font-semibold text-gray-300 uppercase tracking-wider mb-1">Email Address</span>
+                <span class="text-base text-gray-300">support@startup.com</span>
             </div>
             <div class="contact-info-item">
-                <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Phone Number</span>
-                <span class="text-sm font-medium text-dark">+009 8754 3433 223</span>
+                <span class="block text-base font-semibold text-gray-400 uppercase tracking-wider mb-1">Phone Number</span>
+                <span class="text-base text-gray-300">+009 8754 3433 223</span>
             </div>
             <div class="contact-info-item">
-                <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Office Location</span>
-                <span class="text-sm font-medium text-dark">76/A, Green valle, Califonia USA.</span>
+                <span class="block text-base font-semibold text-gray-400 uppercase tracking-wider mb-1">Office Location</span>
+                <span class="text-base text-gray-300">76/A, Green valle, Califonia USA.</span>
             </div>
             <div class="contact-info-item flex gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-8 h-8"><path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103l0-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8"><path d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-6 h-6 fill-white"><path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-white"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103l0-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 fill-white"><path d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"/></svg>
             </div>
         </div>
     </section>
 
-    <section class="message-section py-24 mx-auto px-6 flex flex-col items-center gap-16">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5 w-2/3">
-            <div class="address-item flex flex-col gap-1 w-1/2">
+    <section class="message-section py-24 mx-auto px-6 flex flex-col section-bg">
+        <div class="address-1 grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8 w-[85%] mx-auto">
+            <div class="address-item flex flex-col gap-2">
                 <span class="text-xs font-semibold">Your Name</span>
                 <span class="text-gray-400 text-sm border-b border-gray-600">Full Name</span>
             </div>
-            <div class="address-item flex flex-col gap-1 w-1/2">
-                <span class="text-xs font-semibold">Your Name</span>
-                <span class="text-gray-400 text-sm border-b border-gray-600">Full Name</span>
+            <div class="address-item flex flex-col gap-2">
+                <span class="text-xs font-semibold">Phone(Optional)</span>
+                <span class="text-gray-400 text-sm border-b border-gray-600">Phone Number</span>
             </div>
-            <div class="address-item flex flex-col gap-1 w-1/2">
-                <span class="text-xs font-semibold">Your Name</span>
-                <span class="text-gray-400 text-sm border-b border-gray-600">Full Name</span>
+            <div class="address-item flex flex-col gap-2">
+                <span class="text-xs font-semibold">Message</span>
+                <span class="text-gray-400 text-sm border-b border-gray-600">Type Message</span>
             </div>
-            <div class="address-item flex flex-col gap-1 w-1/2">
-                <span class="text-xs font-semibold">Your Name</span>
-                <span class="text-gray-400 text-sm border-b border-gray-600">Full Name</span>
+            <div class="address-item flex flex-col gap-2">
+                <span class="text-xs font-semibold">Email Address</span>
+                <span class="text-gray-400 text-sm border-b border-gray-600">Email Address</span>
             </div>
-            <div class="address-item flex flex-col gap-1 w-1/2">
-                <span class="text-xs font-semibold">Your Name</span>
-                <span class="text-gray-400 text-sm border-b border-gray-600">Full Name</span>
+            <div class="address-item flex flex-col gap-2">
+                <span class="text-xs font-semibold">Subject</span>
+                <span class="text-gray-400 text-sm border-b border-gray-600">Type Subject</span>
             </div> 
         </div>
-        <div class="address-item flex flex-col gap-1 mb-5 w-2/3">
-            <label class="text-xs font-semibold">Message</label>
-            <textarea placeholder="Type Message" rows="4" class="w-2/3 px-4 py-3 rounded-xl border border-gray-200 text-sm"></textarea>
+        <div class="address-2 flex flex-col gap-1 my-6 w-[85%] mx-auto">
+            <label class="text-xs font-semibold mb-2">Message</label>
+            <textarea placeholder="Type Message" rows="4" class="px-4 py-3 rounded-xl border border-gray-200 text-sm"></textarea>
         </div>
-        <div class="address-3 flex lg:flex-col sm:flex-row items-start sm:items-center gap-4 w-2/3">
-            <span class="justify-start flex items-start border-2"><input type="checkbox" class="w-4 h-4">I have read the terms of the Service &amp; I accept Privacy Policy </span>
-            <button class="w-2/3 px-8 py-3 text-white font-semibold text-sm bg-blue-600 shadow-lg shadow-blue-200">
+        <div class="address-3 flex lg:flex-col gap-4 w-[85%] mx-auto">
+            <span class="justify-start flex items-start text-base"><input type="checkbox" class="w-4 h-4 mr-4">I have read the terms of the Service &amp; I accept Privacy Policy </span>
+            <button class="px-2 lg:px-8 py-3 text-white font-semibold text-sm bg-blue-600 shadow-lg shadow-blue-200">
                   Send Message
             </button>
         </div>
     </section>
 
-    <section class="collaboration-section collab-bg py-20 mx-auto px-6 text-center flex justify-around">
-        <div class="title mb-8 w-1/2">
-            <span class="block text-3xl font-extrabold text-white mb-4 leading-tight">Looking for a collaboration? Get Started Today!</span>
-            <p class="text-blue-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <section class="collaboration-section collab-bg py-24 mx-auto px-6 text-center flex flex-col lg:flex-row justify-around section-bg">
+        <div class="title mb-8 w-full lg:w-1/2">
+            <span class="block text-4xl font-extrabold mb-4">Looking for a collaboration? Get Started Today!</span>
+            <p class="text-gray-300 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <button class="h-16 px-4 py-1 text-white font-semibold rounded-lg shadow-xl shadow-blue-900">Get Started Now</button>
+        <button class="h-16 px-4 py-1 text-white font-semibold rounded-lg shadow-xl bg-blue-600 shadow-blue-800">Get Started Now</button>
     </section>
 
-    <footer class="bg-dark py-24 px-6 mx-auto flex flex-col justify-around items-start gap-4">
-        <div class="footer px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+    <footer class="bg-dark py-24 px-6 mx-auto flex flex-col justify-around items-start gap-4 section-bg">
+        <div class="footer px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 w-[85%] mx-auto">
             <div class="footer-item lg:col-span-2">
                 <img src="./10001.svg" alt="logo" class="text-2xl font-bold text-white mb-4 inline-block">
                 <p class="text-sm text-gray-400 leading-relaxed mb-6 max-w-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <div class="social-icons flex gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-8 h-8"><path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103l0-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8"><path d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-6 h-6 fill-white"><path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 fill-white"><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103l0-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 fill-white"><path d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"/></svg>
                 </div>
             </div>
 
             <div class="footer-item">
-                <h3 class="text-sm font-bold text-white mb-4">Company</h3>
+                <h3 class="text-xl font-bold mb-4">Company</h3>
                 <div class="flex flex-col gap-2">
-                    <a href="#" class="text-sm text-gray-400">Home</a>
-                    <a href="#" class="text-sm text-gray-400">Product</a>
-                    <a href="#" class="text-sm text-gray-400">Careers</a>
-                    <a href="#" class="text-sm text-gray-400">Pricing</a>
+                    <a href="#" class="text-base text-gray-300">Home</a>
+                    <a href="#" class="text-base text-gray-300">Product</a>
+                    <a href="#" class="text-base text-gray-300">Careers</a>
+                    <a href="#" class="text-base text-gray-300">Pricing</a>
                 </div>
             </div>
 
             <div class="footer-item">
-                <h3 class="text-sm font-bold text-white mb-4">Support</h3>
+                <h3 class="text-xl font-bold mb-4">Support</h3>
                 <div class="flex flex-col gap-2">
-                    <a href="#" class="text-sm text-gray-400">Company</a>
-                    <a href="#" class="text-sm text-gray-400">Press media</a>
-                    <a href="#" class="text-sm text-gray-400">Our Blog</a>
-                    <a href="#" class="text-sm text-gray-400">Contact Us</a>   
+                    <a href="#" class="text-base text-gray-300">Company</a>
+                    <a href="#" class="text-base text-gray-300">Press media</a>
+                    <a href="#" class="text-base text-gray-300">Our Blog</a>
+                    <a href="#" class="text-base text-gray-300">Contact Us</a>   
                 </div>        
             </div>
 
             <div class="footer-item">
-                <h3 class="text-sm font-bold text-white mb-1">Toll Free Customer Care</h3>
-                <span class="block text-sm text-gray-400 mb-4">+(1) 123 456 7890</span>
-                <h3 class="text-sm font-bold text-white mb-4">Need live support?</h3>
-                <span>support@domain.com</span>
+                <h3 class="text-xl font-bold mb-1">Toll Free Customer Care</h3>
+                <span class="block text-base text-gray-300 mb-4">+(1) 123 456 7890</span>
+                <h3 class="text-xl font-bold text-white mb-1">Need live support?</h3>
+                <span class="block text-base text-gray-300 mb-4">support@domain.com</span>
             </div>
 
             <div class="footer-item">
-                <h3 class="text-sm font-bold text-white mb-1">Newsletter</h3>
-                <span class="block text-xs text-gray-400 mb-3">Subscribe to receive future updates</span>
-                <div class="flex">
+                <h3 class="text-xl font-bold my-6">Newsletter</h3>
+                <span class="block text-base text-gray-300 mb-3">Subscribe to receive future updates</span>
+                <div class="flex gap-4">
                     <input type="email" placeholder="Enter your email address"
-                           class="flex-1 px-4 py-2.5 rounded-l-full bg-white/10 border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-primary">
-                    <button class="px-4 py-2.5 bg-primary rounded-r-full text-white text-sm font-semibold hover:bg-blue-500 transition-all">→</button>
+                           class="flex px-4 py-2 rounded-l-full text-sm">
+                    <button class="px-4 py-3 rounded-full text-sm font-semibold border-2 border-gray-300">→</button>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom px-6 py-5 flex flex-col sm:flex-row items-center justify-around gap-3">
+        <div class="footer-bottom flex flex-col lg:flex-row items-center mx-auto gap-6 justify-around gap-3">
             <div class="flex items-center gap-6">
-                <span class="text-xs text-gray-400">English</span>
-                <span class="text-xs text-gray-400">Privacy Policy</span>
-                <span class="text-xs text-gray-400">Support</span>
+                <span class="text-base text-gray-300">English</span>
+                <span class="text-base text-gray-300">Privacy Policy</span>
+                <span class="text-base text-gray-300">Support</span>
             </div>
-            <span class="block text-xs text-gray-500">Copyright © 2025 GoStartup. All rights reserved.</span>
+            <span class="block text-base text-gray-300">Copyright © 2025 GoStartup. All rights reserved.</span>
         </div>
     </footer>  
 </body>
